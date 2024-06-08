@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+<html class="h-100" lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="~{layout::head}">
+    <meta charset="UTF-8">
+    <title>CallaoPets</title>
 </head>
-<body>
-$END$
+<body class="h-100" th:data-id="${session.usuarioid.idusuario}" th:data-nomrol="${session.usuarioid.roles}">
+<img class="position-absolute top-50 start-50 translate-middle" th:src="@{../images/loader.svg}">
+<script th:src="@{/scripts/web/administracion/frmdashboard.js}" type="text/javascript"></script>
 </body>
 </html>
